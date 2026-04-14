@@ -1,60 +1,86 @@
-**Hollow Knight Arena | C#, Unity**
+# Hollow Knight Arena
 
--A game inspired by an existing one. The player has 9 movement abilities, 3 spells, 24 items, 
-2 game modes, 3 arenas and fights a boss with 10 attacks. Implemented an input buffer system
+A 2D action game inspired by Hollow Knight, featuring multiple movement abilities, spells, items, arenas, and boss combat mechanics.
 
-Assets/Scripts/PlayTest Scene Scripts - this is where most of the code is at.
+---
 
+## Features
 
+- 9 player movement abilities including double jump, wall jump, dash, dodge, roll, and fast fall
+- 3 combat spells inspired by the original Hollow Knight
+- 24 collectible/equippable items (charms)
+- 2 unique game modes with different gameplay mechanics
+- 3 playable combat arenas
+- 1 boss featuring 4 phases and 10 unique attacks
+- Input buffering system for smoother and more responsive gameplay
 
-Currently has 2 game modes:
+---
 
-1. Classic - same controls and abilities as in the original Hollow Knight
+## Game Modes
 
--jump, double jump, wall slide, wall jump, dash
--3 spells from the original
--12 items (charms) to choose from in the menu before the boss
+### Classic
 
+Replicates the controls and mechanics of the original Hollow Knight.
 
-2. Ultimate - a couple of additional movement abilities
+- Jump, double jump, wall slide, wall jump, dash
+- 3 original spells
+- 12 selectable charms before boss fights
 
--everything in classic + fast fall, spot dodge, air dodge, roll
--3 spells from the original
--12 new items (charms) to choose from in the menu before the boss
+### Ultimate
 
-Currently has 1 boss with 4 phases and 10 attacks.
+Expanded version with additional movement mechanics.
 
-Currently has 3 arenas.
+- Everything from Classic mode
+- Fast fall, spot dodge, air dodge, roll
+- 3 original spells
+- 12 additional selectable charms before boss fights
 
-Has an input buffer system for better user experience
-(for example, if the player presses the attack button twice in quick
-succession, even though the attack was on cooldown when the attack
-button was pressed the second time, the player will still perform
-the attack exactly when the attack cooldown is over, because of the
-buffer system, instead of the second attack never happening).
+---
 
+## Technical / Design Highlights
 
+- Implemented input buffering for improved gameplay responsiveness  
+- Added coyote-time / jump leniency mechanics to improve platforming feel  
+- Reduced player hitbox size relative to sprite for fairer-feeling collisions  
+- Designed modular systems for:
+  - Player state management
+  - Boss attack behavior
+  - Hitbox detection
+  - Item/charm handling
+  - Input buffering
 
-What I learned from this passion project:
+---
 
--Working with a menu/graphic user interface, animations, physics
--Refactoring code, writing scalable, consistent and readable code that has just the right amount of abstraction
--How to plan my ideas, functionalities and mechanics before actually implementing them
--Debugging, having a better feel for avoiding code that would cause hard to debug problems later down the line.
--Thinking about the user experience - input buffer system for making the game feel more fluid, 
-the player has a slightly smaller hitbox then the sprite so that it doesn't feel like they took unfair damage,
-after walking off a ledge, there's still a couple of frames when the player can jump, 
-in order to not frustrate the player if they just barely missed the timing
--Planning how certain systems will work and designing them - the hitbox system, the boss (enemy) attack system,
-the player state system, the input buffering system, the item system.
--Better understanding the trade off between readability, memory efficiency, development time and scalability
+## What I Learned
 
+- Working with UI/menus, animations, and physics systems
+- Writing scalable, readable, and maintainable code with proper abstraction
+- Planning game mechanics and systems before implementation
+- Debugging and avoiding difficult-to-maintain code patterns
+- Designing systems with user experience in mind
+- Understanding trade-offs between readability, scalability, memory efficiency, and development speed
 
+---
 
-YouTube video showcasing this video game: https://www.youtube.com/watch?v=phzQARODG74
+## Tech Stack
 
-Note: I focused more on the game’s logic, so I didn’t create art style for the background or enemies.
-I just reused the existing sprites for the main character’s animations.
+- **Engine:** Unity
+- **Programming Language:** C#
+- **Core Technologies:** Unity Physics, Animation System, State Management
 
-Note: This project was committed all at once after development had already started, 
-as I didn't know how to use Git from the beginning. Version history is limited in early stages.
+---
+
+## Demo
+
+YouTube video showcasing this video game:  
+https://www.youtube.com/watch?v=phzQARODG74
+
+---
+
+## Additional Notes
+
+This project focused primarily on gameplay programming and technical implementation rather than visual art design.  
+Existing sprites were reused for character animations and placeholder visuals.
+
+This project was committed after development had already started, as Git version control was not used during the earliest development stages.  
+As a result, version history is limited for the initial implementation.
